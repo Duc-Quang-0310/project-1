@@ -1,0 +1,13 @@
+.abcd {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgreen;
+  display: flex;
+
+  .test {
+    width: 50%;
+    height: 50%;
+    background-color: lightpink;
+    margin: auto;
+  }
+}
