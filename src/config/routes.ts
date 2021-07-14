@@ -1,7 +1,8 @@
-import Navbar from "../components/Navbar";
 import iRoute from "../interfaces/route";
 import { LandingPage } from "../pages/LandingPage";
 import { Logging } from "../pages/Logging";
+import { TestRedux } from "../pages/TestRedux";
+import { UserProfile } from "../pages/UserProfile";
 
 const routes: iRoute[] = [
     {
@@ -17,11 +18,19 @@ const routes: iRoute[] = [
         component: Logging
     },
     {
-        path:"/navbar",
-        name:"Navbar",
+        path: "/testRedux",
+        name:"testRedux",
         exact: true,
-        component: Navbar
-    }
+        component: TestRedux
+    },
+    {
+        path: "/ThongTinTaiKhoan",
+        name:"UserProfile",
+        exact: true,
+        component: UserProfile
+    },
+ 
+   
 ]
 
 export default routes;

@@ -1,0 +1,38 @@
+$--text-primary: #b6b6b6;
+$--text-secondary: #ececec;
+$--bg-primary: #23232e;
+$--bg-secondary: #141418;
+
+.login_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.login_form {
+  width: 28rem;
+  height: 30rem;
+  margin: auto;
+  border: 0.003px solid rgb(180, 180, 180);
+  border-radius: 30px;
+
+  h2 {
+    text-align: center;
+    margin-block: 3rem 1.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 3rem;
+
+    .form_input {
+      margin-block-start: 2rem;
+      color: $--text-primary;
+    }
+
+    input {
+      font-size: 1rem;
+    }
+  }
+}

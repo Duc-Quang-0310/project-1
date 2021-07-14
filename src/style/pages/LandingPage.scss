@@ -1,0 +1,42 @@
+.home_container {
+  width: 100%;
+  height: 100vh;
+}
+
+.home_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  background: {
+    size: 400%;
+    position: right;
+  }
+  animation: bg_animation 15s infinite alternate;
+
+  h1 {
+    font: {
+      size: 10rem;
+      family: "Helvatica", "san-serif";
+      style: italic;
+    }
+
+    letter-spacing: 0.6ch;
+    color: #2e2e2e;
+    padding: {
+      top: 9rem;
+    }
+  }
+}
+
+@keyframes bg_animation {
+  0% {
+    background-position: right;
+  }
+
+  100% {
+    background-position: left;
+  }
+}

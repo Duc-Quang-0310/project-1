@@ -1,13 +1,82 @@
-.abcd {
-  width: 100vw;
-  height: 100vh;
-  background-color: lightgreen;
-  display: flex;
+$--text-primary: #b6b6b6;
+$--text-secondary: #ececec;
+$--bg-primary: #23232e;
+$--bg-secondary: #141418;
+$--transition: 400ms;
 
-  .test {
-    width: 50%;
-    height: 50%;
-    background-color: lightpink;
-    margin: auto;
+.navbar {
+  padding: 0;
+  margin: 0;
+  width: 5rem;
+  height: 100vh;
+  background-color: $--bg-primary;
+  position: fixed;
+  transition: width $--transition ease;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      list-style: none;
+      width: 100%;
+    }
+  }
+
+  span {
+    display: none;
+  }
+
+  &:hover {
+    width: 15rem;
+  }
+
+  &:hover span {
+    display: block;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $--text-primary;
+    text-decoration: none;
+  }
+}
+
+.navbar_logo {
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  background: $--bg-secondary;
+
+  a {
+    transition: $--transition + 200;
+    text-transform: uppercase;
+    letter-spacing: 0.2ch;
+    font-size: 1.6rem;
+  }
+
+  span {
+    margin-left: 1rem;
+  }
+}
+
+.navbar_items {
+  width: 100%;
+
+  a {
+    height: 5rem;
+    filter: grayscale(100%) opacity(0.7);
+    transition: $--transition + 200;
+  }
+
+  a:hover {
+    background-color: $--bg-secondary;
+    filter: grayscale(0) opacity(1);
+  }
+
+  &:hover .nav_icon {
+    color: #ff7eee;
   }
 }

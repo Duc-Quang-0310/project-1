@@ -1,24 +1,36 @@
-import React from 'react'
-import {BrowserRouter as Router, Route, Switch, RouteComponentProps} from "react-router-dom"
-import routes from './config/routes'
-import "./style/Application.scss"
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  RouteComponentProps,
+} from "react-router-dom";
+import routes from "./config/routes";
+import "./style/Application.scss";
 
-export const Application:React.FunctionComponent = () => {
-    return (
-        <div>
-            <Router>
-                <Switch>
-                    {routes.map((route, index) => {
-                        return(
-                            <Route key={index} path={route.path} exact={route.exact} 
-                                render={(props: RouteComponentProps<any>) => (
-                                    <route.component name = {route.name} {...props} {...route.props}/>
-                                )}
-                             />
-                        )
-                    })}
-                </Switch>
-            </Router>
-        </div>
-    )
-}
+export const Application: React.FunctionComponent = () => {
+  return (
+    <div>
+      <Router>
+        <Switch>
+          {routes.map((route, index) => {
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                render={(props: RouteComponentProps<any>) => (
+                  <route.component
+                    name={route.name}
+                    {...props}
+                    {...route.props}
+                  />
+                )}
+              />
+            );
+          })}
+        </Switch>
+      </Router>
+    </div>
+  );
+};
