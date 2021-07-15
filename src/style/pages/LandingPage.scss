@@ -22,11 +22,20 @@
       family: "Helvatica", "san-serif";
       style: italic;
     }
-
     letter-spacing: 0.6ch;
     color: #2e2e2e;
-    padding: {
-      top: 9rem;
+  }
+
+  .inactive {
+    padding-top: 8rem;
+  }
+
+  h2 {
+    padding-top: 8rem;
+    text-align: end;
+    font: {
+      size: 3rem;
+      style: italic;
     }
   }
 }

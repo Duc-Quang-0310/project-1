@@ -4,8 +4,13 @@ import "../style/pages/Logging.scss";
 import { TextField } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logging } from "../reduxToolKit/feature/logging/loggingSlice";
 
 export const Logging: React.FunctionComponent<iPage> = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
   const [Input, setInput] = useState({
     username: "",
     password: "",
@@ -27,6 +32,8 @@ export const Logging: React.FunctionComponent<iPage> = () => {
       alert("Sai tài khoản hoặc mật khẩu");
     } else if (Input.password === "admin" || Input.username !== "admin") {
       alert("Đăng nhập thành công");
+      dispatch(logging());
+      history.push("/");
     }
   };
 
