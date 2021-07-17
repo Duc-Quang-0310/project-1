@@ -1,5 +1,6 @@
 export interface iCounterState {
-    value: number
+    value: number,
+    status: 'idle' | 'loading' | 'failed';
   }
 
 export interface iLogging{

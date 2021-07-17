@@ -5,10 +5,10 @@ import { AccessibilityRounded, DoneAllRounded } from "@material-ui/icons";
 import { iPersonalInfo, iStateInfo } from "../interfaces/userInfo";
 import { styled, styledIcon } from "../style/style";
 import { updateUserInfo } from "../reduxToolKit/feature/userInfo/userInfoSlice";
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../reduxToolKit/hooks";
 
 export const PersonalInfo = ({ NewInfo, setNewInfo }: iStateInfo) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const infoWrapper: iPersonalInfo[] = [
     {
       label: "Họ và tên",

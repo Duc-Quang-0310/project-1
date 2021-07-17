@@ -5,10 +5,10 @@ import { Button, TextField } from "@material-ui/core";
 import { Person, DoneAllRounded } from "@material-ui/icons";
 import { iStateInfo } from "../interfaces/userInfo";
 import { updateUserInfo } from "../reduxToolKit/feature/userInfo/userInfoSlice";
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../reduxToolKit/hooks";
 
 export const Account = ({ NewInfo, setNewInfo }: iStateInfo) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const hanldeChangeInput = (
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ): void => {

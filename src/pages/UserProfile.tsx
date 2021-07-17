@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
 import Navbar from "../components/Navbar";
 import iPage from "../interfaces/page";
 import { iStateInfo } from "../interfaces/userInfo";
@@ -9,15 +8,20 @@ import "../style/pages/UserProfile.scss";
 import { PersonalInfo } from "../components/PersonalInfo";
 import { HomeAdress } from "../components/HomeAdress";
 import { Account } from "../components/Account";
+import { useAppSelector } from "../reduxToolKit/hooks";
 
 export const UserProfile: React.FC<iPage> = () => {
   const [NewInfo, setNewInfo] = useState<iStateInfo["NewInfo"]>({
-    name: useSelector((state: RootState) => state.userInfo.name),
-    district: useSelector((state: RootState) => state.userInfo.district),
-    age: useSelector((state: RootState) => state.userInfo.age),
-    subdistrict: useSelector((state: RootState) => state.userInfo.subdistrict),
-    city: useSelector((state: RootState) => state.userInfo.city),
-    displayName: useSelector((state: RootState) => state.userInfo.displayName),
+    name: useAppSelector((state: RootState) => state.userInfo.name),
+    district: useAppSelector((state: RootState) => state.userInfo.district),
+    age: useAppSelector((state: RootState) => state.userInfo.age),
+    subdistrict: useAppSelector(
+      (state: RootState) => state.userInfo.subdistrict
+    ),
+    city: useAppSelector((state: RootState) => state.userInfo.city),
+    displayName: useAppSelector(
+      (state: RootState) => state.userInfo.displayName
+    ),
   });
 
   return (

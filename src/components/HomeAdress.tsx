@@ -4,11 +4,11 @@ import { Home, DoneAllRounded } from "@material-ui/icons";
 import { styled } from "../style/style";
 import { styledIcon } from "../style/style";
 import { iPersonalInfo, iStateInfo } from "../interfaces/userInfo";
-import { useDispatch } from "react-redux";
 import { updateUserInfo } from "../reduxToolKit/feature/userInfo/userInfoSlice";
+import { useAppDispatch } from "../reduxToolKit/hooks";
 
 export const HomeAdress = ({ NewInfo, setNewInfo }: iStateInfo) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const HomeAdress: iPersonalInfo[] = [
     {
       label: "Quận",
